@@ -42,64 +42,33 @@
 
     <!-- TOOLS -->
 <section id="tools">
-    <h2>Featured AI Tools</h2>
-
-    <div class="tool-card">
-      <h3>ChatGPT</h3>
-      <p>AI assistant for writing, coding, research, and learning.</p>
-    </div>
-
-    <div class="tool-card">
-      <h3>Runway</h3>
-      <p>AI-powered video editing and generation.</p>
-    </div>
-
-    <div class="tool-card">
-      <h3>Midjourney</h3>
-      <p>Generate high-quality images using AI.</p>
-    </div>
-  </section>
-<!-- remove if not working -->
-<section id="tools">
   <h2>Featured AI Tools</h2>
-  <div class="filters">
-  <button data-filter="all" class="filter-btn active">All</button>
-  <button data-filter="video" class="filter-btn">Video</button>
-  <button data-filter="design" class="filter-btn">Design</button>
-  <button data-filter="writing" class="filter-btn">Writing</button>
-  <button data-filter="coding" class="filter-btn">Coding</button>
-</div>
 
+  <div class="filters">
+    <button data-filter="all" class="filter-btn active">All</button>
+    <button data-filter="video" class="filter-btn">Video</button>
+    <button data-filter="design" class="filter-btn">Design</button>
+    <button data-filter="writing" class="filter-btn">Writing</button>
+    <button data-filter="coding" class="filter-btn">Coding</button>
+  </div>
 
   <div class="tools-grid">
-    <div class="tool-card reveal">
+    <div class="tool-card reveal" data-category="writing coding">
       <h3>ChatGPT</h3>
-      <p class="tag">Writing · Coding · Research</p>
-      <p>
-        My go-to AI for learning, explaining concepts, and generating ideas.
-      </p>
-      <a href="#" class="btn">Learn more</a>
+      <p class="tag">Writing · Coding</p>
+      <p>I use this to learn faster and break down ideas.</p>
+      <a href="tools/chatgpt.html" class="btn">Learn more</a>
     </div>
 
-    <div class="tool-card reveal">
+    <div class="tool-card reveal" data-category="video">
       <h3>Runway</h3>
-      <p class="tag">Video · Film</p>
-      <p>
-        Powerful AI tools for video editing, effects, and generation.
-      </p>
-      <a href="#" class="btn">Learn more</a>
-    </div>
-
-    <div class="tool-card reveal">
-      <h3>Midjourney</h3>
-      <p class="tag">Design · Images</p>
-      <p>
-        Generates high-quality visuals and concepts using AI prompts.
-      </p>
-      <a href="#" class="btn">Learn more</a>
+      <p class="tag">Video</p>
+      <p>AI-powered video editing and effects.</p>
+      <a href="tools/runway.html" class="btn">Learn more</a>
     </div>
   </div>
 </section>
+
 
     <!-- CONTACT -->
     <section id="contact">
