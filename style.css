@@ -84,25 +84,94 @@ footer {
   opacity: 0.7;
   margin-bottom: 0.8rem;
 }
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-.filter-btn {
-  transition: background 0.3s ease, color 0.3s ease;
+body {
+  background: #0f172a;
+  color: #e5e7eb;
 }
 
-.filter-btn:hover {
+/* Section */
+.ai-tools-section {
+  padding: 70px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.ai-tools-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+
+/* Grid */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Card */
+.tool-card {
+  background: linear-gradient(145deg, #020617, #020617);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: left;
+  border: 1px solid #1e293b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.tool-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.purpose {
+  color: #38bdf8;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cbd5f5;
+  margin-bottom: 20px;
+}
+
+
+.tool-card a {
+  display: inline-block;
+  padding: 10px 16px;
   background: #38bdf8;
-  color: #0f172a;
+  color: #020617;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
 }
-``
+
+.tool-card a:hover {
+  background: #0ea5e9;
+}
+
+
 
 
 
