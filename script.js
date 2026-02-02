@@ -24,23 +24,28 @@ filterBtns.forEach(btn => {
 });
 
 // ===== AI TOOLS SEARCH FILTER =====
-const searchInput = document.getElementById("toolSearch");
-const toolCards = document.querySelectorAll(".tool-card");
+document.addEventListener("DOMContentLoaded", () => {
 
-searchInput.addEventListener("input", () => {
-  const query = searchInput.value.toLowerCase();
+  const searchInput = document.getElementById("toolSearch");
+  const toolCards = document.querySelectorAll(".tool-card");
 
-  toolCards.forEach(card => {
-    const text = card.innerText.toLowerCase();
+  if (!searchInput) {
+    console.error("Search input not found");
+    return;
+  }
 
-    if (text.includes(query)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase();
+
+    toolCards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(query) ? "block" : "none";
+    });
   });
+
 });
 
 
 
   
+
