@@ -25,27 +25,30 @@ filterBtns.forEach(btn => {
 
 // ===== AI TOOLS SEARCH FILTER =====
 document.addEventListener("DOMContentLoaded", () => {
-
   const searchInput = document.getElementById("toolSearch");
   const toolCards = document.querySelectorAll(".tool-card");
-
-  if (!searchInput) {
-    console.error("Search input not found");
-    return;
-  }
+  const noResults = document.getElementById("noResults");
 
   searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase();
+    const query = searchInput.value.toLowerCase().trim();
+    let visibleCount = 0;
 
     toolCards.forEach(card => {
       const text = card.innerText.toLowerCase();
-      card.style.display = text.includes(query) ? "block" : "none";
+      if (text.includes(query)) {
+        card.style.display = "block";
+        visibleCount++;
+      } else {
+        card.style.display = "none";
+      }
     });
-  });
 
+    // show / hide "no results"
+    noResults.style.display = visibleCount === 0 ? "block" : "none";
+  });
 });
 
 
-
   
+
 
