@@ -187,6 +187,35 @@ body.dark .ai-tools-section {
   transition: all 0.7s ease;
 }
 
+.tools-search {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.tools-search input {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.tools-search input:focus {
+  border-color: #6c63ff; /* brand color */
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.2);
+}
+
+body.dark .tools-search input {
+  background: #111;
+  color: #fff;
+  border-color: #444;
+}
+
+
+
 
 
 
