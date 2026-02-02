@@ -176,6 +176,18 @@ body {
 body.dark .ai-tools-section {
   background: #0b0b10;
 }
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.7s ease;
+}
+
+
 
 
 
