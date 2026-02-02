@@ -22,3 +22,16 @@ filterBtns.forEach(btn => {
     });
   });
 });
+
+const searchInput = document.getElementById("toolSearch");
+const toolCards = document.querySelectorAll(".tool-card");
+
+searchInput.addEventListener("input", () => {
+  const value = searchInput.value.toLowerCase();
+
+  toolCards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(value) ? "block" : "none";
+  });
+});
+
