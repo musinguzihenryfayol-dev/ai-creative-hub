@@ -218,6 +218,18 @@ body.dark .tools-search input {
   display: block; /* prevents JS + animation conflicts */
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
 
 
