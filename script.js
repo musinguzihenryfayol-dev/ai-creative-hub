@@ -44,3 +44,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+const searchInput = document.getElementById("toolSearch");
+const toolCards = document.querySelectorAll(".tool-card");
+
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+
+  toolCards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+
+    if (text.includes(query)) {
+      card.style.display = "block"; // show
+    } else {
+      card.style.display = "none";  // hide
+    }
+  });
+});
+
+
+
