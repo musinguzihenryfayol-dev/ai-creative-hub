@@ -128,14 +128,15 @@ h1, h2 {
 
 /* ===== REVEAL ANIMATION (SAFE) ===== */
 .reveal {
-  opacity: 1;               /* IMPORTANT */
-  transform: translateY(0);
+  opacity: 1;
+  transform: none;
 }
 
 .reveal.active {
-  animation: fadeUp 0.7s ease forwards;
+  opacity: 1;
+  transform: translateY(0);
+   animation: fadeUp 0.7s ease forwards;
 }
-
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -154,3 +155,4 @@ footer {
   background: #020617;
   color: #9ca3af;
 }
+
