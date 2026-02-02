@@ -23,15 +23,24 @@ filterBtns.forEach(btn => {
   });
 });
 
-const searchInput = document.getElementById("toolSearch");
-const toolCards = document.querySelectorAll(".tool-card");
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("toolSearch");
+  const toolCards = document.querySelectorAll(".tool-card");
 
-searchInput.addEventListener("input", () => {
-  const value = searchInput.value.toLowerCase();
+  if (!searchInput) return;
 
-  toolCards.forEach(card => {
-    const text = card.innerText.toLowerCase();
-    card.style.display = text.includes(value) ? "block" : "none";
+  searchInput.addEventListener("input", () => {
+    const value = searchInput.value.toLowerCase().trim();
+
+    toolCards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+
+      if (value === "" || text.includes(value)) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
   });
 });
 
