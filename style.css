@@ -214,6 +214,11 @@ body.dark .tools-search input {
   color: #fff;
   border-color: #444;
 }
+.tool-card {
+  display: block; /* prevents JS + animation conflicts */
+}
+
+
 
 
 
