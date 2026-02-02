@@ -49,6 +49,32 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+const filterButtons = document.querySelectorAll(".filter-btn");
+const toolCards = document.querySelectorAll(".tool-card");
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    // active button style
+    filterButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.dataset.filter;
+
+    toolCards.forEach(card => {
+      const category = card.dataset.category;
+
+      if (filter === "all" || category === filter) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+});
+
+
+
   
+
 
 
