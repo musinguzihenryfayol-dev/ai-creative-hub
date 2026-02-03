@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "writing",
       purpose: "AI Assistant",
       rating: 5,
+      review: "ChatGPT is my go-to for breaking down complex coding bugs. It's like having a tutor available 24/7.",
       desc: "I use ChatGPT for brainstorming ideas, solving math problems, and learning faster.",
       link: "https://chat.openai.com",
       isAffiliate: false
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "design",
       purpose: "Design & Graphics",
       rating: 4,
+      review: "No stress for the graphic designing. I use it to make poster and all other designs.",
       desc: "I create posters, thumbnails, and social media designs using AI-powered tools.",
       link: "https://www.canva.com",
       isAffiliate: false
@@ -24,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "video",
       purpose: "Video Editing",
       rating: 5,
+      review: "The video editing is realistic. It is mostly used in tiktok content.",
       desc: "I edit cinematic videos, apply captions, and enhance TikTok content.",
       link: "https://www.capcut.com",
       isAffiliate: true
@@ -33,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "music",
       purpose: "Music & Audio Generation",
       rating: 5,
+      review: "The vocals are shockingly realistic. I use it to make background tracks for my project demos.",
       desc: "I use Suno to create full songs, melodies, and background music from simple text prompts.",
       link: "https://suno.com",
       isAffiliate: false
@@ -42,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "writing",
       purpose: "Productivity",
       rating: 4,
+      review: "It is very productive",
       desc: "I organize school work, plan projects, and summarize notes efficiently.",
       link: "https://www.notion.so/product/ai",
       isAffiliate: false
@@ -127,5 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // 6. INITIAL LOAD
   displayTools(aiTools);
 });
+
 
 
