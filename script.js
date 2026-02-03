@@ -60,60 +60,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let activeFilter = "all";
 
-  // 3. RENDER FUNCTION
- function displayTools(toolsToRender) {
-  toolsGrid.innerHTML = toolsToRender.map(tool => `
-    <div class="tool-card reveal active">
-      <div class="card-header">
+// 3. RENDER FUNCTION
+  // This turns your JavaScript objects into HTML cards
+  function displayTools(toolsToRender) {
+    // Clear the grid first
+    toolsGrid.innerHTML = "";
+
+    // Map through data and create HTML
+    toolsGrid.innerHTML = toolsToRender.map(tool => `
+      <div class="tool-card reveal active" data-category="${tool.category}">
         <h3>${tool.name}</h3>
-        <button class="share-btn" onclick="shareTool('${tool.name}', '${tool.link}')" title="Share Tool">
-           🔗
-        </button>
-      </div>
-      
-      <p class="purpose">${tool.purpose}</p>
-      
-      <div class="rating">
-        ${"⭐".repeat(tool.rating)}${"☆".repeat(5 - tool.rating)}
-      </div>
-      
-      <p class="desc">${tool.desc}</p>
-
-      ${tool.review ? `
-        <div class="my-review">
-          <h4>Henry's Take</h4>
-          <p>"${tool.review}"</p>
+        <p class="purpose">${tool.purpose}</p>
+        
+        <div class="rating">
+          ${"⭐".repeat(tool.rating)}${"☆".repeat(5 - tool.rating)}
+          <span>(${tool.rating}/5)</span>
         </div>
-      ` : ''}
-      
-      <a href="${tool.link}" target="_blank" rel="${tool.isAffiliate ? 'nofollow sponsored' : 'noopener noreferrer'}">
-         ${tool.isAffiliate ? 'Try ' + tool.name : 'Open Tool'}
-      </a>
-    </div>
-  `).join('');
+        
+        <p class="desc">${tool.desc}</p>
+        
+        <a href="${tool.link}" 
+           target="_blank" 
+           rel="${tool.isAffiliate ? 'nofollow sponsored' : 'noopener noreferrer'}">
+           ${tool.isAffiliate ? 'Try ' + tool.name : 'Open Tool'}
+        </a>
+      </div>
+    `).join('');
 
-  noResults.style.display = toolsToRender.length === 0 ? "block" : "none";
-}
-
-// 3. Add the Share Functionality
-window.shareTool = (name, link) => {
-  if (navigator.share) {
-    navigator.share({
-      title: `Check out ${name} on AI Creative Hub`,
-      url: link
-    }).catch(console.error);
-  } else {
-    // Fallback: Copy to clipboard
-    navigator.clipboard.writeText(link);
-    alert("Link copied to clipboard!");
-  }
-};
     // Handle "No Results" message
     if (noResults) {
       noResults.style.display = toolsToRender.length === 0 ? "block" : "none";
     }
   }
-
   // 4. COMBINED FILTER & SEARCH LOGIC
   function filterTools() {
     const query = searchInput.value.toLowerCase().trim();
@@ -153,6 +131,7 @@ window.shareTool = (name, link) => {
   // 6. INITIAL LOAD
   displayTools(aiTools);
 });
+
 
 
 
