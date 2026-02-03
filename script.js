@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // 1. DATA: Add or remove tools here. No need to touch HTML!
-  const aiTools = [
+ const aiTools = [
     {
       name: "ChatGPT",
       category: "writing",
@@ -29,6 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
       isAffiliate: true
     },
     {
+      name: "Suno AI",
+      category: "music", // Matches your new filter button!
+      purpose: "Music & Audio Generation",
+      rating: 5,
+      desc: "I use Suno to create full songs, melodies, and background music from simple text prompts.",
+      link: "https://suno.com",
+      isAffiliate: false
+    },
+    {
       name: "Notion AI",
       category: "writing",
       purpose: "Productivity",
@@ -38,8 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       isAffiliate: false
     }
   ];
-
-  // 2. SELECTORS
+ // 2. SELECTORS
   const toolsGrid = document.querySelector(".tools-grid");
   const searchInput = document.getElementById("toolSearch");
   const filterButtons = document.querySelectorAll(".filter-btn");
@@ -119,3 +127,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // 6. INITIAL LOAD
   displayTools(aiTools);
 });
+
