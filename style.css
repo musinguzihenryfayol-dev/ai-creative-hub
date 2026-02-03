@@ -7,21 +7,41 @@
 }
 
 /* ===== BASE ===== */
+/* Define Colors */
+:root {
+  --bg-body: #0f172a;
+  --bg-card: #020617;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --accent: #38bdf8;
+  --border: #1e293b;
+}
+
+/* Light Mode Overrides */
+[data-theme="light"] {
+  --bg-body: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --accent: #0ea5e9;
+  --border: #e2e8f0;
+}
+
 body {
-  background: #0f172a;
-  color: #e5e7eb;
+  background: var(--bg-body);
+  color: var(--text-main);
+  transition: background 0.3s ease, color 0.3s ease;
   line-height: 1.6;
 }
 
-section {
-  padding: 4rem 1.5rem;
-  max-width: 1100px;
-  margin: auto;
+.tool-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  /* ... keep your other card styles ... */
 }
 
-h1, h2 {
-  color: #38bdf8;
-  text-align: center;
+h1, h2, .tool-card h3 {
+  color: var(--accent);
 }
 
 /* ===== HERO ===== */
@@ -231,6 +251,7 @@ footer {
   font-size: 0.9rem;
   color: #e5e7eb;
 }
+
 
 
 
