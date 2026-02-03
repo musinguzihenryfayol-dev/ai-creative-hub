@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Suno AI",
-      category: "music", // Matches your new filter button!
+      category: "music",
       purpose: "Music & Audio Generation",
       rating: 5,
       desc: "I use Suno to create full songs, melodies, and background music from simple text prompts.",
@@ -127,4 +127,5 @@ document.addEventListener("DOMContentLoaded", () => {
   // 6. INITIAL LOAD
   displayTools(aiTools);
 });
+
 
