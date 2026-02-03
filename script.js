@@ -30,52 +30,135 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "writing",
       purpose: "AI Assistant",
       rating: 5,
-      review: "ChatGPT is my go-to for breaking down complex coding bugs. It's like having a tutor available 24/7.",
-      desc: "I use ChatGPT for brainstorming ideas, solving math problems, and learning faster.",
+      review: "The gold standard for brainstorming. I use it daily to explain complex topics and draft project ideas.",
+      desc: "An advanced AI that can chat, write code, and solve problems in seconds.",
       link: "https://chat.openai.com",
       isAffiliate: false
     },
     {
-      name: "Canva AI",
+      name: "Perplexity AI",
+      category: "writing",
+      purpose: "AI Search Engine",
+      rating: 5,
+      review: "It's like Google but better because it cites its sources. Perfect for accurate research.",
+      desc: "A search engine that uses AI to give direct answers with citations from the live web.",
+      link: "https://www.perplexity.ai",
+      isAffiliate: false
+    },
+    {
+      name: "Midjourney",
       category: "design",
-      purpose: "Design & Graphics",
+      purpose: "Art Generation",
+      rating: 5,
+      review: "The highest quality AI art I've ever seen. The detail in the textures is unmatched.",
+      desc: "A powerful tool that turns text prompts into stunning, photorealistic artwork.",
+      link: "https://www.midjourney.com",
+      isAffiliate: false
+    },
+    {
+      name: "Adobe Firefly",
+      category: "design",
+      purpose: "Creative Design",
       rating: 4,
-      review: "No stress for the graphic designing. I use it to make poster and all other designs.",
-      desc: "I create posters, thumbnails, and social media designs using AI-powered tools.",
-      link: "https://www.canva.com",
+      review: "Amazing for adding or removing objects in photos. It's built right into Photoshop.",
+      desc: "Adobe's family of creative generative AI models for image effects and editing.",
+      link: "https://www.adobe.com/firefly",
+      isAffiliate: false
+    },
+    {
+      name: "Luma Dream Machine",
+      category: "video",
+      purpose: "Video Generation",
+      rating: 4,
+      review: "It creates incredibly realistic 5-second videos. Great for cinematic b-roll.",
+      desc: "An AI model that creates high-quality, realistic videos from text and images.",
+      link: "https://lumalabs.ai/dream-machine",
+      isAffiliate: false
+    },
+    {
+      name: "Runway Gen-3",
+      category: "video",
+      purpose: "AI Film Tools",
+      rating: 5,
+      review: "Professional-grade video tools. Their 'Motion Brush' gives you total control over animations.",
+      desc: "A creative suite for video generation, inpainting, and motion tracking.",
+      link: "https://runwayml.com",
+      isAffiliate: false
+    },
+    {
+      name: "GitHub Copilot",
+      category: "coding",
+      purpose: "AI Pair Programmer",
+      rating: 5,
+      review: "It's like it knows what I'm going to type before I do. Essential for speeding up coding.",
+      desc: "An AI assistant that suggests code and whole functions in real-time within your editor.",
+      link: "https://github.com/features/copilot",
+      isAffiliate: false
+    },
+    {
+      name: "Cursor",
+      category: "coding",
+      purpose: "AI Code Editor",
+      rating: 5,
+      review: "I switched from VS Code to Cursor because the AI integration is so much deeper. It builds whole features.",
+      desc: "A code editor built for AI programming that can see your entire codebase.",
+      link: "https://cursor.com",
+      isAffiliate: false
+    },
+    {
+      name: "Replit Agent",
+      category: "coding",
+      purpose: "App Builder",
+      rating: 4,
+      review: "You can build and deploy a full-stack app just by talking to it. Great for rapid prototyping.",
+      desc: "An AI agent that codes, builds, and deploys applications for you from scratch.",
+      link: "https://replit.com",
+      isAffiliate: false
+    },
+    {
+      name: "Suno AI",
+      category: "music",
+      purpose: "Music Generation",
+      rating: 5,
+      review: "Unbelievable vocals. I use it to make custom background music for my YouTube videos.",
+      desc: "Generate full songs including lyrics and vocals from a simple text description.",
+      link: "https://suno.com",
       isAffiliate: false
     },
     {
       name: "CapCut AI",
       category: "video",
-      purpose: "Video Editing",
+      purpose: "Smart Editing",
       rating: 5,
-      review: "The video editing is realistic. It is mostly used in tiktok content.",
-      desc: "I edit cinematic videos, apply captions, and enhance TikTok content.",
+      review: "The auto-captioning feature alone saves me hours of work every week.",
+      desc: "An easy-to-use video editor with powerful AI features for social media creators.",
       link: "https://www.capcut.com",
       isAffiliate: true
     },
     {
-      name: "Suno AI",
-      category: "music",
-      purpose: "Music & Audio Generation",
-      rating: 5,
-      review: "The vocals are shockingly realistic. I use it to make background tracks for my project demos.",
-      desc: "I use Suno to create full songs, melodies, and background music from simple text prompts.",
-      link: "https://suno.com",
+      name: "Canva AI",
+      category: "design",
+      purpose: "Fast Design",
+      rating: 4,
+      review: "Perfect for non-designers who need quick thumbnails or social media posts.",
+      desc: "Simple design platform with AI-powered 'Magic Studio' for instant creations.",
+      link: "https://www.canva.com",
       isAffiliate: false
     },
     {
       name: "Notion AI",
       category: "writing",
-      purpose: "Productivity",
+      purpose: "Smart Workspace",
       rating: 4,
-      review: "It is very productive",
-      desc: "I organize school work, plan projects, and summarize notes efficiently.",
+      review: "I use it to summarize long study notes and organize my project tasks.",
+      desc: "An AI assistant built into your workspace to help you write, edit, and summarize.",
       link: "https://www.notion.so/product/ai",
       isAffiliate: false
     }
   ];
+
+   
+
  // 2. SELECTORS
   const toolsGrid = document.querySelector(".tools-grid");
   const searchInput = document.getElementById("toolSearch");
@@ -177,6 +260,7 @@ window.shareTool = (name, link) => {
   // 6. INITIAL LOAD
   displayTools(aiTools);
 });
+
 
 
 
