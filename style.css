@@ -95,12 +95,13 @@ h1, h2, .tool-card h3 {
   outline: none;
   border-color: #38bdf8;
 }
-/* --- GRID STRETCH FIX --- */
+
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Slightly wider cards */
-  gap: 1.5rem;
-  align-items: stretch; /* Ensures all cards in a row have the same height */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.8rem;
+  min-height: 400px; /* This prevents the section below from jumping up */
+  margin-top: 2rem;
 }
 
 /* ===== CARD ===== */
@@ -269,6 +270,7 @@ footer {
   font-size: 1.2rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
 
 
 
