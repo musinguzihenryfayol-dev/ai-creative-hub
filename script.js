@@ -87,6 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
 // 3. RENDER FUNCTION
 function displayTools(toolsToRender) {
   toolsGrid.innerHTML = toolsToRender.map(tool => `
+<div class="card-footer">
+  <span class="category-badge">${tool.category}</span>
+  <span class="status-tag">Free to Try</span>
+</div>
+
     <div class="tool-card reveal active">
       <div class="card-header">
         <h3>${tool.name}</h3>
@@ -172,6 +177,7 @@ window.shareTool = (name, link) => {
   // 6. INITIAL LOAD
   displayTools(aiTools);
 });
+
 
 
 
