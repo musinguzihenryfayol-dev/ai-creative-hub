@@ -286,6 +286,20 @@ section {
   text-transform: uppercase;
   font-weight: bold;
 }
+.legal-disclaimer {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.legal-disclaimer p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
 
 
 
