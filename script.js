@@ -1,4 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
+ // --- THEME TOGGLE LOGIC ---
+  const themeToggle = document.getElementById("themeToggle");
+  const themeIcon = document.getElementById("themeIcon");
+  const currentTheme = localStorage.getItem("theme");
+
+  // Check for saved theme
+  if (currentTheme === "light") {
+    document.documentElement.setAttribute("data-theme", "light");
+    themeIcon.textContent = "☀️";
+  }
+
+  themeToggle.addEventListener("click", () => {
+    let theme = document.documentElement.getAttribute("data-theme");
+    
+    if (theme === "light") {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+      themeIcon.textContent = "🌙";
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+      themeIcon.textContent = "☀️";
+    }
+  });
   // 1. DATA: Add or remove tools here. No need to touch HTML!
  const aiTools = [
     {
@@ -148,6 +172,7 @@ window.shareTool = (name, link) => {
   // 6. INITIAL LOAD
   displayTools(aiTools);
 });
+
 
 
 
